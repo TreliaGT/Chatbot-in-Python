@@ -1,22 +1,70 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["My pleasure", "You're Welcome"],
-         "context": [""]
-        },
-        {"tag": "query",
-         "patterns": ["What is Simplilearn?"],
-         "responses": ["Simplilearn is the popular online Bootcamp & online courses learning platform "],
-         "context": [""]
-        } 
-    ]}
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day",
+          "What's up?", "How's it going?", "Yo", "Good morning", "Good afternoon", "Good evening"
+        ],
+        "responses": [
+          "Hello!", "Good to see you again", "Hi there, how can I help?", "Hey there! How's it going?",
+          "Greetings!", "Hi! How can I assist you today?", "Hey! How's everything?", "Hello, what can I do for you?"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time",
+          "Catch you later", "Take care", "See you soon", "Farewell", "I'm off, see you"
+        ],
+        "responses": [
+          "See you!", "Have a nice day", "Bye! Come back again soon.", "Take care, have a great day!",
+          "Goodbye, stay safe!", "Until next time!", "It was great talking to you, goodbye!"
+        ],
+        "context": ["goodbye"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+          "Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me",
+          "I appreciate it", "Many thanks", "Thanks a lot", "Thanks for your help"
+        ],
+        "responses": [
+          "My pleasure!", "You're welcome!", "Anytime!", "I'm happy to help!", "Glad I could assist!",
+          "You're very welcome!", "No problem, happy to help!"
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "help",
+        "patterns": [
+          "Can you help me?", "I need help", "Help me out", "I have a question", "Can you assist me?", "I need some assistance",
+          "Please help me", "Help!", "I'm stuck", "Can you give me a hand?"
+        ],
+        "responses": [
+          "Sure! How can I assist you?", "I'm here to help, what do you need?", "Of course, what's the problem?",
+          "I'm happy to assist, what's on your mind?", "How can I help you today?", "Please let me know how I can help you.",
+          "Tell me what you need, and I'll do my best to assist you."
+        ],
+        "context": [""]
+      },
+      {
+        "tag": "joke",
+        "patterns": [
+          "Tell me a joke", "Make me laugh", "Do you know any jokes?", "Tell me something funny", "I need a laugh",
+          "Can you tell a joke?", "Say something funny", "Joke time!"
+        ],
+        "responses": [
+          "Why don't skeletons fight each other? They don't have the guts.",
+          "Why don't eggs tell jokes? Because they might crack up.",
+          "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+          "What do you call fake spaghetti? An impasta!",
+          "Why don't oysters donate to charity? Because they are shellfish.",
+          "What's orange and sounds like a parrot? A carrot!"
+        ],
+        "context": [""]
+      }
+    ]
+  }
+  

@@ -16,7 +16,7 @@ intents = json.loads(open('intents.json').read())
 # Load pre-trained words and classes
 words = pickle.load(open('words.pkle', 'rb'))
 classes = pickle.load(open('classes.pkle' , 'rb'))
-model = load_model('chatbot_model.h5')
+model = load_model('chatbot_model.keras')
 
 # Function to clean up sentence
 def clean_up_sentence(sentence):
@@ -53,16 +53,22 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
+
+            action = i.get('context', [])
+            if 'goodbye' in action:
+                perform_goodbye_action(result)
             break
     return result
+
+
+def perform_goodbye_action(reply):
+    print(reply)
+    exit()
 
 print ('GO!, Bot is Running')
 
 while True:
     message = input('')
-    if message.lower() in ['exit', 'quit', 'bye']:
-        print("Goodbye!")
-        break
-    ints = predict_class(message)
+    ints = predict_class(message.lower())
     res = get_response(ints, intents)
     print(res)
